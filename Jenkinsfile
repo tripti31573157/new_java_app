@@ -5,13 +5,13 @@ pipeline {
        }
        stages {
               stage ("Pulling the code from SCM") {
-                     step {
+                     steps {
 		              git branch: 'main', url: 'https://github.com/tripti31573157/new_java_app.git'
 			   
 		   }
 
 		   stage ("Build the code") {
-                         step {
+                         steps {
                                   sh 'sudo mvn dependency:purge-local-repository'
 				  
   
