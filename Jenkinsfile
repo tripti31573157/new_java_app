@@ -23,7 +23,15 @@ pipeline {
 
 		   }
 
-	      
+	     stage ("Testing the build") {
+                      steps {
+                              sh 'sudo docker build -t java-app:$BUILD_TAG
+
+
+		      }
+
+
+	     }
 
 
 	       
