@@ -1,6 +1,6 @@
 pipeline {
        agent {
-               label "Jenkins-slave"
+               label "ubuntu-slave"
  
        }
        stages {
