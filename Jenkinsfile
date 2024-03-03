@@ -8,10 +8,14 @@ pipeline {
                      steps {
 		              git branch: 'main', url: 'https://github.com/tripti31573157/new_java_app.git'
 			   
-		   }
+              		   }
+ 
+    
+                  }
 
-		   stage ("Build the code") {
-                         steps {
+      }
+       		   stage ("Build the code") {
+                       steps {
                                   sh 'sudo mvn dependency:purge-local-repository'
 				  
   
@@ -22,11 +26,11 @@ pipeline {
 	      
 
 
-	      } 
+	       
              
             
 	       
               
-       }
+       
 
 }
