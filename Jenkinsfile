@@ -13,10 +13,10 @@ pipeline {
     
                   }
 
-      }
-       		   stage ("Build the code") {
-                       steps {
-                                  sh 'sudo mvn dependency:purge-local-repository'
+      
+       	     stage ("Build the code") {
+                      steps {
+                              sh 'sudo mvn dependency:purge-local-repository'
 				  
   
 		      }
@@ -28,7 +28,7 @@ pipeline {
 
 	       
              
-            
+      }      
 	       
               
        
