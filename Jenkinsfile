@@ -26,7 +26,9 @@ pipeline {
 	     stage ("Create docker image") {
                       steps {
                               sh 'sudo docker build -t java-app:$BUILD_TAG  .'
-                              sh 'sudo docker tag java-app:$BUILD_TAG  tripti14/java-app:$BUILD_TAG'
+                              sh 'sudo docker tag java-app:$BUILD_TAG tripti14/java-app:$BUILD_TAG' 
+
+      }
 		      }
 
 
@@ -34,7 +36,7 @@ pipeline {
 	     stage ("push on Docker") {
 	             steps {
                              withCredentials([string(credentialsId: 'Docker_pass_ID', variable: 'docker_hub_pass_var')]) {
-                                     sh 'sudo docker login -u tripti14 -p ${docker_hub_pass_var}
+                                     sh 'sudo docker login -u tripti14 -p ${docker_hub_pass_var}'
 				     sh 'sudo docker push tripti14/java-app:$BUILD_TAG'
                      }  
 
