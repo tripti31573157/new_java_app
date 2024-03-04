@@ -33,7 +33,7 @@ pipeline {
 
 
 	     }
-	     stage ("push on Docker") {
+	     stage ("push on Docker-Hub") {
 	             steps {
                              withCredentials([string(credentialsId: 'Docker_pass_ID', variable: 'docker_hub_pass_var')]) {
                                      sh 'sudo docker login -u tripti14 -p ${docker_hub_pass_var}'
