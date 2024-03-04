@@ -28,7 +28,7 @@ pipeline {
                               sh 'sudo docker build -t java-app:$BUILD_TAG  .'
                               sh 'sudo docker tag java-app:$BUILD_TAG tripti14/java-app:$BUILD_TAG' 
 
-      }
+      
 		      }
 
 
