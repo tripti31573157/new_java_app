@@ -54,6 +54,9 @@ pipeline {
                           steps {
 			          sh 'curl --silent http://13.232.30.29/java-web-app/'
 	     }
+
+
+	     }
 	       
              
       }      
