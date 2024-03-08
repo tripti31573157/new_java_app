@@ -46,11 +46,14 @@ pipeline {
               } 
 	     stage ("Testing the Build") {
                                steps {
-                                        sh 'sudo docker run -dit --name java-test -p 8080:8080 tripti14/java-app:$BUILD_TAG'
-		    }
+                                         sh 'sudo docker run -dit --name java-test$BUILD_TAG -p 8081:8080 tripti14/java-app:$BUILD_TAG'
+		    }  
 
 	     }
-
+             stage ("QAT Testing") {
+                          steps {
+			          sh 'curl --silent http://13.232.30.29/java-web-app/'
+	     }
 	       
              
       }      
