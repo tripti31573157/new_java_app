@@ -46,7 +46,7 @@ pipeline {
               } 
 	     stage ("Testing the Build") {
                                steps {
-                                         sh 'sudo docker run -dit --name java-test$BUILD_TAG -p 8082:8080 tripti14/java-app:$BUILD_TAG'
+                                         sh 'sudo docker run -dit --name java-test$BUILD_TAG -p 8083:8080 tripti14/java-app:$BUILD_TAG'
 		    }  
 
 	     }
