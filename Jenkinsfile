@@ -52,7 +52,7 @@ pipeline {
 	     }
              stage ("QAT Testing") {
                           steps {
-			          sh 'curl --silent http://13.232.30.29:8083/java-web-app/'
+			          sh 'curl --silent http://172.31.38.129:8083/java-web-app/'
 	     }
 
 
